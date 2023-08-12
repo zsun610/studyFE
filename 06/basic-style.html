@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+  <style>
+    /* * (전체에 적용) {
+      margin : 각 요소사이의 여백을 조정 padding : 모든 브라우저 지정 스타일을 기본으로 초기화 
+      margin:0;
+      padding:0; 
+    } */
+
+    /* 타입선택자 or 태그 선택자 : p태그가 적용된 곳에 모두 파란색으로 처리 */
+    p {
+      color:blue
+    }
+
+    /* class 선택자(.클래스명) : 특정 부분에만 적용, 문서 내 여러번 사용 가능  */
+    .redtext {
+      color:red;
+    }
+  
+    /* id 선택자(#id명) : 특정 부분에만 사용, 문서 내 한 번만 사용 가능 (고유성) */
+    #container {
+      border:1px solid #222;
+      /* padding : 여백 */
+      padding:10px;
+    }
+
+    /* 그룹 선택자 : 선택자 두 개를 쉼표로 구분해서(그룹으로 묶어서) 나열 */
+    h1,p {
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>레드향</h1>
+    <!-- <p> ~ </p> : 텍스트 단락 -->
+    <!-- <span class="(클래스 명)"></span> : 특정 글자에만 class 를 적용하고 싶을 경우  -->
+    <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    <p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+  </div>
+</body>
+</html>

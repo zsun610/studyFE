@@ -1,0 +1,51 @@
+<!-- 
+  <audio>, <video> 태그 속성
+  controls : 플레이어 화면에 컨트롤 바를 표시
+  autoplay : 오디오나 비디오를 자동으로 실행
+  (크롬브라우저, 모바일 웹브라우저는 자동 실행 지원X -> 비디오의 경우에 muted속성을 사용하면 영상만 자동재생가능)
+  muted : 오디오나 비디오의 소리를 제거
+  loop : 오디오나 비디오를 반복 재생
+  preload : 페이지를 불러올 때 오디오나 비디오 파일을 어떻게 로딩할 것인지 지정
+  (auto(웹브라우저 로딩과 동시에 불러옴), metadata, none (재생할 때 불러옴) 기본은 preload = auto)
+  width, height : 비디오 플레이어의 너비와 높이를 지정, 둘 중 하나만 지정하면 나머지는 자동
+  poster = "파일 이름" : <video> 태그에서 사용하는 속성, 비디오가 재생되기 전 화면에 표시되는 이미지 설정
+ 
+  플레이어 표시 없이 배경음악 넣기 (거의 사용 불가)
+  <auto src = "medias/spring.mp3" autoplay loop></audio>
+  
+  비디오 자동 재생하기
+  <video src="medias/salad.mp4" width = "400" autoplay muted loop></video>
+  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+</head>
+<body>
+  <!-- 이미지 삽입할 때 동일 폴더가 아닌 다른 하위폴더에 있으면 다른 상위폴더도 경로 작성, 
+    대체텍스트 작성해야, 이미지가 오류나서 안뜨면 대체 텍스트 뜸 -->
+  <!-- 이미지 삽입 태그 : <img src = "" alt = ""> : 이미지 삽입 태그-->
+  <img src="images/tangerines.jpg" alt="레드향">
+  <!-- 오디오 삽입 태그 : <audio src = "" controls(=재생막대 표시)> ~ </audio> -->
+  <audio src="medias/spring.mp3" controls></audio>
+  <!-- 비디오 삽입 태그 : <video src = "" controls(=재생막대 표시) width = "" (controls보다 앞에 와도 상관없음)> ~ </video> -->
+  <video src="medias/salad.mp4" controls width="450"></video>
+  
+  <h1>레드향</h1>
+  <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+  <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  <p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+  <hr>
+  <h2>레드향 샐러드 레시피</h2>
+  <p><b>재료 : </b>레드향 1개, 아보카도 1개, 토마토 1개, 샐러드 채소 30g</p>
+  <p><b>드레싱 : </b>올리브유 1큰술, 레몬즙 2큰술, 꿀 1큰술, 소금 약간</p>
+  <ol>
+    <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
+    <li>레드향과 아보카도, 토마토를 먹기 좋은 크기를 썰어둡니다.</li>
+    <li>드레싱 재료를 믹서에 갈아줍니다.</li>
+    <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝!</li>
+  </ol>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 
+  font-family : 글꼴 종류를 지정
+  font-size : 글자 크기를 지정
+  font-style : 글자를 이탤릭체로 표시할지 지정
+  font-weight : 글자 굵기를 지정 -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+  <style>
+    /* 웹폰트 사용 : font-family: 'Nanum Pen Script', 바탕; (폰트 사용못할 시에 바탕체 사용) */
+     @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+    h1 {
+      /* 웹폰트 많이 사용할수록 네트워크 속도 떨어짐 https://fonts.google.com/
+      바탕체는 모든 컴퓨터에 저장되어 있지만 깔려있지 않은 폰트를 지정하면 표시되지 않음 -> 웹폰트 사용 or 폰트 다운로드 */
+      font-family: 'Nanum Pen Script', 바탕;
+      /* font-size는 px, em 단위 사용 가능 (em이란 'M' 사이즈, 1em = 16px)  */
+      font-size:3em
+    }
+    .italic {
+      font-style:italic;
+    }
+    .accent {
+      font-weight:700;
+    }
+  </style>
+</head>
+<body>
+  <h1>레드향</h1>
+  <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+  <p>레드향은 한라봉과 귤을 교배한 것으로</p>
+  <p class="italic">일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>    
+</body>
+</html> 

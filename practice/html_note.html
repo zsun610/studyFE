@@ -1,0 +1,240 @@
+<p>안녕하세요.</p> (<p></p> : 태그 , 안녕하세요 : 요소)
+
+<!-- <!DOCTYPE html> : 문서가 html5 문서임 -->
+<!DOCTYPE html>
+<!-- <html lang="ko"> 태그 : 웹 문서 시작과 끝을 알림, 문서 언어 설정 -->
+<html lang="ko">
+<!-- <head> 태그 : 웹 브라우저가 웹 문서를 해석하는데 필요한 문서 정보를 알려주는 태그 -->
+<head>   
+  <!-- <meta> 태그 : 데이터에 관한 데이터, 웹 브라우저에 보이진 않지만 웹 문서와 관련된 정보를 지정할 때 사용(검색 엔진에서 사이트를 검색할 때 참고) -->
+  <meta charset="UTF-8">       <!-- 화면에 글자를 표시할 때 어떤 인코딩을 사용할지 지정(한글) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="html의 구조">                     <!-- 웹 문서의 키워드 --> 
+  <meta name="description" content="html의 구조를 알아봅시다">     <!-- 웹 문서의 설명 --> 
+  <meta name="author" content="Jisun Yang">                        <!-- 웹 문서의 제작자 --> 
+  <!-- <title> 태그 : 웹 문서의 제목 --> 
+  <title>Document</title>                                          
+</head>
+<!-- <body> 태그 : 웹 브라우저 화면에 나타나는 내용 -->
+<body>
+  <h1>레드향</h1>
+  <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+  <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로 <br>
+    일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  <blockquote>
+    <i>비타민 C</i>와 <i>비타민 P</i>가 풍부해<br>
+    <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.
+  </blockquote>
+  <abbr title="Internet of Things">IoT</abbr>
+
+  <p>내가 경험한 가장 흥미진진한 일은 누군가를 만나는 일이다 - 영화, <cite>'비포선셋'</cite>중</p>
+  
+  <code>function savetheLocal() 소스코드</code>
+
+  <p>가격:13,000원 <small>(부가세 별도 부가 정보)</small></p>
+
+  <p>물의 화학식은 H<sub>2(아래첨자)</sub>O입니다.</p>
+
+  <p>E = mc<sup>2(제곱)</sup></p>
+
+  <p><s>34,000원(취소선)</s>19,000원</p>
+
+  <u>텍스트에 단순히 밑줄 긋기</u>
+
+  <ins>새로운 내용을 삽입합니다.</ins>
+
+  <del>기존 내용을 삭제합니다.</del>
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+● 문서 구조 (헤더->본문/사이드바->푸터)
+  <header> 태그 : 사이트 전체나 특정 영역의 헤더(주로 맨 위나 왼쪽, 검색창이나 사이트메뉴)
+
+  <nav> 태그 : 웹 문서 안에서 다른 위치로 연결하거나 다른 웹 문서로 연결하는 링크
+               웹 문서의 위치에 영향을 받지 않음(헤더,푸터,사이드 바 안에 포함할 수도 독립해서 사용할 수도)
+
+  <main> 태그 : 웹 문서마다 다르게 보여주는 내용으로 구성
+                웹 문서에서 한 번만 사용 가능 (메뉴, 사이드 바, 로고 같은 페이지마다 똑같이 들어간 정보는 넣을 수 없음)
+  <article> 태그 : 웹에서 실제로 보여주고 싶은 내용을 넣음(블로그의 포스트, 뉴스 사이트의 기사)
+                   여러 개 사용 가능, 이 안에 <section> 태그 넣을 수 있음
+  <section> 태그 : 웹 문서에서 콘텐츠 영역, 몇 개의 콘텐츠를 묶는 용도로 사용 
+                  (단순히 스타일 적용을 위해 콘텐츠를 묶으려면 <div> 태그 사용)                
+  <aside> 태그 : 본문 내용 외에 왼쪽, 오른쪽, 아래에 사이드바를 만듦 (필요할 경우에)
+  
+  <footer> 태그 : 웹 문서 맨 아래 푸터영역을 만듦 (사이트 제작 정보, 저작권 정보, 연락처 등)
+                  <footer> 태그 내에 <header>, <section>, <article> 등 다른 시맨틱 태그들 사용 가능
+
+  <div> 태그 : 여러 소스를 묶는 태그(division)
+               id나 class 속성을 사용해서 1. 영역을 구분(문서 구조)  2. 스타일로 문서를 꾸미기 위해 사용
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+● 웹 문서의 html 태그 (텍스트,이미지,표 등)
+  1. 텍스트
+    <hn>제목</hn> : 제목(heading), 1~6 숫자가 커질수록 글자 크기는 작아짐
+    <p>텍스트 내용</p> : 텍스트 단락(paragraph), 앞 뒤로 빈 줄이 생김
+                        태그 내에서 줄바꿈해봤자 적용 안 됨 (내용이 길어서 웹 브라우저에 다 못나타내는 경우 자동 줄바꿈)        
+    <br> 태그 : 줄바꿈
+    <blockquote>인용문</blockquote> : 인용문, 약간 들여쓰기 함
+    <strong>굵게 강조할 텍스트</strong> : 강조할 내용(경고, 주의사항)
+    <b>굵게 표시할 텍스트</b> : 단순히 굵게 표시
+    <em>이탤릭체로 강조할 텍스트</em> : emphasis - 특정 부분을 강조하고 싶을 때
+    <i>이탤릭체로 표시할 텍스트<i> : italic(기울기체) - 단순히 다른 텍스트와 구별 (먀음속의 생각, 용어, 관용구 등)
+  
+  2. 목록
+  <ol> : ordered list 순서 있는 목록 (기본값 숫자)
+    <li>항목1</li>
+    <li>항목2</li>
+  </ol> 
+  type = "1" (숫자(기본값)), type = "a" (영어 소문자), type = "A" (영어 대문자), type = "i" (로마 숫자 대문자), type = "I" (로마 숫자 대문자)
+
+  <ul> : unordered list (기본값 동그라미 불릿)
+    <li>항목1</li>
+    <li>항목2</li>
+  <ul>
+  
+  <dl> : description list 설명 목록 (이름과 값 형태로 된 목록)
+    <dt>이름</dt>
+    <dd>값</dd>
+  </dl>
+
+  3. 표
+    <table> 표 내용 </table> : 표의 시작과 끝을 알려주는 태그
+    <caption> 표 제목 </caption> : 표의 위쪽 중앙에 표시
+    <tr> : 행을 만드는 태그
+    <td> : 셀을 만드는 태그
+    <th> : 표의 제목 행에 셀 (진하게, 가운데 정렬)
+    rowspan, colspan : 행이나 열 합치는 태그, <td>나 <th> 태그 내에서 사용
+    <td rowspan="합칠 셀의 개수"> 셀의 내용</td>
+    <colgroup>,<col style = ""> : 특정 열에 style 적용하기 위해 사용, <caption>태그 바로 다음에 사용
+                                  colgroup 내에 col을 실제 열 개수만큼 작성해야 함.
+                                  같은 스타일을 사용한다면 span="개수" 로 묶을 수 있음
+
+    제목 - 본문 - 요약 구조로 이루어진 표 (화면 낭독기, CSS 각각의 스타일 적용)
+    <thead> : 제목
+    <tbody> : 본문
+    <tfoot> : 요약
+
+    <table>
+      <caption>표 제목</caption>
+      <colgroup>
+        <col style="background-color:#eee;">
+        <col span="2" style="width:150px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>셀 제목1</th>
+          <th>셀 제목2</th>
+          <th>셀 제목3</th>
+        </tr>
+      <thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">셀 내용1</td>
+          <td>셀 내용2</td>
+          <td>셀 내용3</td>
+        <tr>
+        <tr>
+          <td>셀 내용2</td>
+          <td>셀 내용3</td>
+        <tr>
+      </tbody>
+      <tfoot>
+        <td colspan="2">표 요약내용<td>
+      </tfoot>
+    </table>
+
+  4. 이미지 (GIF,JPG/JPEG,PNG)
+    <img src="이미지 파일 경로" alt="대체용 텍스트(오류 발생시 표시)" width="100%(창너비에 맞춤)" height="150"> : 웹문서에 이미지 삽입
+    - alt : 메뉴일시 이미지 안에 포함된 텍스트, 아이콘 같은 것은 내용 안넣어도 OK
+    - width, height : 단위 px(절대값, 숫자만 작성), %(브라우저 창의 상대값) , 하나만 설정할지 나머지값 자동 계산
+
+  5. 오디오(mp3(*지원),mp4.m4a), 비디오(mp4(*지원),webm)
+    <object width="너비" height="높이" data="파일"> : 오디오, 비디오, PDF, 다른 문서 등 다양한 멀티미디어 파일을 삽입
+    <embed src="파일 경로" width="너비" height="높이"> : (제일 지원 잘 됨) 오디오, 비디오, 이미지 등 다양한 멀티미디어 파일을 삽입
+
+    <audio src="오디오 파일 경로" controls></audio> : 컨트롤 바 표시 가능
+    <video src="비디오 파일 경로" controls width="700"></video> : 컨트롤 바, 너비, 높이 선택 가능
+
+    autoplay : 자동 실행, loop : 반복 재생, muted : 소리 제거(비디오 자동재생하려면 muted 필수), width, height : 너비, 높이
+    preload = "auto"(기본값) / "metadata" / "none" , poster="썸네일 이미지명" : <video>에서 사용, 썸네일 이미지
+              (auto(웹브라우저 로딩과 동시에 불러옴), metadata, none (재생할 때 불러옴) 기본은 preload = auto)
+    자동 재생 : 웬만한 브라우저에서 불가
+
+  6. 하이퍼링크
+    <a href="링크할 주소">텍스트 또는 이미지</a> : 현재 웹브라우저 창에서 링크가 열림
+    <a href="../05/order.html" target="_blank"(새로운 탭에서 문서가 열림)><img src="images/tangerines.jpg" alt="레드향"></a>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+● 폼(입력 양식) : 로그인, 검색
+  1  <form [속성="속성값"]여러 폼 요소 autocomplete="off" : 자동완성기능 해제(기본값 on)</form> : 폼을 만드는 태그
+  2. <fieldset></fieldset> : 폼의 구역을 나눔
+  3. <legend>로그인</legend> : <fieldset> 태그로 묶은 그룹의 제목
+  4. <input> 태그
+  -> input type 속성 : text, password [size(화면에 보여지는 글자수), value(텍스트 필드에 보여질 내용), maxlength(최대 입력 글자 수)]
+                       search(검색), url(웹주소), email, tel, 
+                       checkbox(여러 개 선택) / radio(1개 선택) [value(서버로 넘길 값 지정), checked(기본 선택값), name(radio 사용시 필수)], 
+                       number(스핀박스) / range(슬라이드막대) [min(기본 0), max(기본 100), step(기본 간격 1), value(초기값)],
+                       date(yyyy-mm-dd), month(yyyy-mm), week(yyyy-몇번째 주), time(시,분,초,분할초), datetime(날짜&시간), datetime-local
+                       [min("2020-03-01"),max,step(스핀박스),value(초기값)]
+                       submit, reset <input type="submit | reset" value="버튼에 표시 txt">,
+                       image(이미지버튼) <input type="image" src="이미지경로" alt="대체 txt">, 
+                       button(오로지 버튼 jas) <input type="button" value="공지 창 열기" onclick="window.open('notice.html')">
+                       file(파일 첨부), hidden(화면에 보이지 않는 서버로 넘길 값) <input type="hidden" name="이름" value="서버로 넘길 값">
+  -> input 속성 : autofocus(커서 초기값), placeholder=""(있었다가 사라지는 것), readonly(읽기 전용), required
+
+  5. <textarea>내용</textarea> 태그 : 폼에서 텍스트 줄을 여러 줄 입력할 때 사용(ex: 회원가입시 약관)
+    [cols(텍스트영역 가로), rows(세로)]  (대략 한글 = 영어 * 2)
+    <label for="memo">메모</label>
+    <textarea id="memo" rows="4" cols="40"></textarea>
+
+  6. <select> 태그 : 여러 옵션 중에서 선택 (드롭다운 목록 : 목록을 클릭했을 때 옵션이 요소 아래쪽으로 펼쳐짐) 
+    [size:화면에 표시할 드롭다운 항목의 개수, multiple:드롭다운 목록에서 둘 이상의 항목을 선택]
+    <option> 태그 [value,selected]
+    <select>
+      <option value="서버로 넘길 값1" selected(초기 선택값)>선택 옵션1</option>
+      <option value="서버로 넘길 값2">선택 옵션2</option>
+    </select>
+
+  7. <datalist> 태그 : 여러 옵션 중에서 선택 (데이터 목록) 
+    -> value 값이 텍스트 필드에도 나타남
+
+    <label for="prod2">포장 여부</label>
+    <input type="text" id="prod2" list="pack(데이터 목록 id)">
+    <datalist id="pack(데이터 목록 i)d">
+      <option value="package(서버로 넘길 값1)">선물포장(선택 옵션1)</option>
+      <option value="unpackage(서버로 넘길 값2)">포장 안 함(선택 옵션2)</option>
+    </datalist>
+
+  8. <button> 태그
+    <button type="submit(초기값) | reset | button">내용</button>
+    <input type="submit | reset | button"> 과 같은 기능
+
+
+  <form autocomplete="on">
+    <fieldset>
+      <legend>로그인</legend>
+      <label for="user-id">아이디</label>
+      <input type="text" size="10" value="바보" id="user-id" placeholder="아이디를 입력해주세요." autofocus>
+      <label for="user-pw">비밀번호</label>
+      <input type="password" maxlength="5" id="user-pw" placeholder="비밀번호를 입력해주세요.">
+      <input type="submit" value="로그인">
+    </fieldset>
+    <fieldset>
+      <legend>상품 선택</legend>
+      <p><b>주문할 상품을 선택해 주세요.</b></p>
+      <input type="checkbox" value="s_3">선물용 3kg
+      <input type="checkbox" value="s_5">선물용 5kg
+      <input type="checkbox" value="f_3">가정용 3kg
+      <input type="checkbox" value="f_5">가정용 5kg
+      <p><b>포장 선택</b></p>
+      <input type="radio" name="gift" value="yes" checked>선물 포장
+      <input type="radio" name="gift" value="no">선물 포장 안 함
+    </fieldset>
+  </form>
+
+
+

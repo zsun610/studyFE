@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 삽입하기</title>
+</head>
+<body>
+  <form action="">
+    <ul id="shipping">
+      <li>
+        <!-- <label for="(라벨명)">이름</label>
+             <input type="(유형 선택)" id="(라벨명)" (value="입력칸에 초기에 뜰 내용")>
+             value - 값을 지정하면 처음에 text field에 표시가 됨 -->
+        <label for="prod">주문 상품</label>
+        <input type="text" id="prod" value="상품용 3KG">
+      </li>
+      <li>
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name">
+      </li>
+      <li>
+        <label for="addr">배송 주소</label>
+        <input type="text" id="addr">
+      </li>
+      <li>
+        <label for="email">이메일</label>
+        <!-- <input type="email" : 이메일 형식만 입력받을 수 있음 -->
+        <input type="email" id="email">
+      </li>
+      <li>
+        <label for="phone">연락처</label>
+        <!-- <input type="tel"> : 모바일에서 입력받을 때 숫자패드가 뜸 -->
+        <input type="tel" id="phone">
+      </li>
+    </ul>
+    
+  </form>
+</body>
+</html>

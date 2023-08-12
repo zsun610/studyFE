@@ -1,0 +1,47 @@
+<!-- color : 글자색을 지정
+text-decoration : 텍스트에 밑줄이나 취소선을 표시할지 여부를 지정
+text-transform : 텍스트 전체 또는 첫 글자를 대문자로 표시
+text-shadow : 텍스트에 그림자 추가
+letter-spacing : 글자 사이의 간격을 지정
+word-spacing : 단어 사이의 간격을 지정
+text-align : 텍스트 정렬 방법을 지정
+line-height : 줄 간격을 조정 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>line-height</title>
+    <style>
+      p {
+        width:600px;
+        border:1px solid #222;
+        padding:10px;
+        margin:10px;
+      }
+      .tstyle {
+        text-align:right;
+        /* 줄 간격 : px , em, % , 배 단위 지정 가능 */
+        line-height:150%;
+      }
+      .tstyle-2 { 
+        text-decoration: line-through;
+      }
+      a {
+        /* 하이퍼링크에서 밑줄을 없앨 때 많이 사용 */
+        text-decoration: none;
+      }
+      /* text-shadow : 가로px, 세로px, 그림자px, 그림자 색상 (+면 오른쪽,아래 / -면 왼쪽, 위로 그림자 짐) */
+      p {
+        text-shadow:5px 5px 3px #ccc;
+      }
+      .small-line {line-height: 2;}
+      .big-line {line-height: 0.7;}
+    </style>
+  </head>
+  <body>    
+    <p class="small-line">껍질에 붉은 빛이 돌아 레드향(감평甘平)이라 불린다. 
+      레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고,
+      <a href="#">과육이 붉고 통통하다.</a></p>
+  </body>
+</html>

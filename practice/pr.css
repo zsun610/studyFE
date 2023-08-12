@@ -1,0 +1,31 @@
+function solution(maps) {
+  let queue = [[0,0]]
+  const dx = [-1,1,0,0];
+  const dy = [0,0,-1,1];
+  
+  let answer = -1;
+  let cnt = 1;
+  
+  while(queue.length) {
+      var tmp = queue.shift();
+      var x = tmp[0];
+      var y = tmp[1];
+      for(let i = 0; i < 4; i++){
+          var nx = x + dx[i];
+          var ny = y + dy[i];
+          
+          if(nx < 0 || nx >= maps.length || ny < 0 || ny >= maps[0].length || maps[x][y] === 0){
+              continue;
+          }
+          else if (maps[nx][ny] === 1){
+              maps[nx][ny] = maps[x][y] + 1;
+              queue.push([nx,ny])
+          }
+      }
+  }
+  
+  if (maps[maps.length - 1][maps[0].length - 1] > 1){
+      answer = maps[maps.length - 1][maps[0].length - 1]
+  }
+  return answer;
+}
